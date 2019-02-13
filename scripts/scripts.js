@@ -125,5 +125,38 @@ $(function (){
     //narrow options between hot or cold arrays inside the trips object
     let temp = trips[userTemp];
 
+    //empty array to hold first filterd options from qustion one
+    let aOne = []//this holds costChoice
+
+    // for loop to go though the temp array and push the usercost to the aOne array
+    for(let i = 0; i < temp.length; i = i + 1){
+        let costChoice = temp[i];
+
+        if(costChoice.cost === userCost){
+            aOne.push(costChoice);
+        }
+    }
+
+
+    let aTwo = []//this holds adventuresChoice
+    for (let i = 0; i < temp.length; i = i + 1) {
+        let adventuresChoice = aOne[i];
+
+        if (adventuresChoice.adventures === userAdventures) {
+            aTwo.push(adventuresChoice);
+        }
+    }
+
+    let aThree = []//this holds thinkerChoice
+    for (let i = 0; i < temp.length; i = i + 1) {
+        let thinkerChoice = aTwo[i];
+
+        if (thinkerChoice.thinker === userThinker) {
+            aThree.push(thinkerChoice);
+        }
+    }
+
+    $(`.results`).html(`<h2 class="yourTrip">${aThree.title}</h2>`);
+
 })
 
