@@ -107,8 +107,23 @@ const trips ={
 
 // doc ready
 $(function (){
+    //prevent the defult on submit
+    //on the event of submit on the form
+    $(`form`).on(`submit`, function(event){
+        //call the event and prevent the default
+        event.preventDefault();
+    })
 
+    //take users input and save them
+    //creating a varibal to hold the user input creating a jQuary selecter to target the answer  and lission for when its checked and hold the val
+    let userTemp = $(`input[name=q-1]:checked`).val();
+    let userCost = $(`input[name=q-2]:checked`).val();
+    let userAdventures = $(`input[name=q-3]:checked`).val();
+    let userThinker = $(`input[name=q-4]:checked`).val();
     
+
+    //narrow options between hot or cold arrays inside the trips object
+    let temp = trips[userTemp];
 
 })
 
