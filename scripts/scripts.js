@@ -1,5 +1,14 @@
+
+//myApp holds the whole quiz
+const myApp = {};
+
+//myApp.init holds the whole funtions for quiz
+myApp.init = function(){
+    myApp.handleSubmit();
+}
+
 // object
-const trips ={
+myApp.trips ={
     //hot array
     hot:[
         {
@@ -102,65 +111,80 @@ const trips ={
             thinker: "logical"
         }
     ]//end of cold array
-}//end of object
+}
 
 
-// doc ready
-$(function (){
+
+myApp.handleSubmit = function() {
     //prevent the defult on submit
-    
-    //take users input and save them
-    //creating a varibal to hold the user input creating a jQuary selecter to target the answer  and lission for when its checked and hold the val
-    let userTemp = $(`input[name=q-1]:checked`).val();
-    let userCost = $(`input[name=q-2]:checked`).val();
-    let userAdventures = $(`input[name=q-3]:checked`).val();
-    let userThinker = $(`input[name=q-4]:checked`).val();
-    
-   
-    //narrow options between hot or cold arrays inside the trips object
-    let temp = trips[userTemp];
-
-
-    //empty array to hold first filterd options from qustion one
-    let aOne = []//this holds costChoice
-
-    // for loop to go though the temp array and push the usercost to the aOne array
-    for(let i = 0; i < temp.length; i = i + 1){
-        let costChoice = temp[i];
-
-        if(costChoice.cost === userCost){
-            aOne.push(costChoice);
-        }
-    }
-
-
-    let aTwo = []//this holds adventuresChoice
-    for (let i = 0; i < temp.length; i = i + 1) {
-        let adventuresChoice = aOne[i];
-
-        if (adventuresChoice.adventures === userAdventures) {
-            aTwo.push(adventuresChoice);
-        }
-    }
-
-    let aThree = []//this holds thinkerChoice
-    for (let i = 0; i < temp.length; i = i + 1) {
-        let thinkerChoice = aTwo[i];
-
-        if (thinkerChoice.thinker === userThinker) {
-            aThree.push(thinkerChoice);
-        }
-    }
-
-    //on the event of submit on the form
     $(`form`).on(`submit`, function (event) {
-        //call the event and prevent the default
         event.preventDefault();
-        console.log("temp:", temp);//TBD
+        //take users input and save them in a varrible
+        userTemp = $(`input[name=q-1]:checked`).val();
+        userCost = $(`input[name=q-2]:checked`).val();
+        userAdventures = $(`input[name=q-3]:checked`).val();
+        userThinker = $(`input[name=q-4]:checked`).val();
+
+        //narrow options between hot or cold arrays inside the trips object
+        let temp = myApp.trips[userTemp];
+        console.log(temp)
+
+
+        //empty array to hold first filterd options
+        // for loop to go though the temp array and filter and push the usercost options to the aOne array
+        const one = temp.filter((item) => {
+            return item.cost === userCost;
+        });
+        console.log("one", one)
+        const two = one.filter((item) => {
+            return item.adventures === userAdventures;
+        });
+        console.log("two", two)
+        const three = two.filter((item) => {
+            return item.thinker === userThinker;
+        });
+        console.log("three",three)
+        //send FNL array to print
+        myApp.print(three);
     })
 
+    // let aOne = []//this holds costChoice
+    // for (let i = 0; i < temp.length; i = i + 1) {
+    //     let costChoice = temp[i];
 
-    $(`.results`).html(`<h2 class="your-trip">${aThree.title}</h2>`);
+    //     if (costChoice.cost === userCost) {
+    //         aOne.push(costChoice);
+    //     }
+    // }
 
+    // let aTwo = []//this holds adventuresChoice
+    // for (let i = 0; i < temp.length; i = i + 1) {
+    //     let adventuresChoice = aOne[i];
+
+    //     if (adventuresChoice.adventures === userAdventures) {
+    //         aTwo.push(adventuresChoice);
+    //     }
+    // }
+
+    // let aThree = []//this holds thinkerChoice
+    // for (let i = 0; i < temp.length; i = i + 1) {
+    //     let thinkerChoice = aTwo[i];
+
+    //     if (thinkerChoice.thinker === userThinker) {
+    //         aThree.push(thinkerChoice);
+    //     }
+    // }
+
+
+  
+}
+
+//on load of page run init function
+$(function(){
+    myApp.init();
 })
 
+//print FNL result
+myApp.print = function(object){
+    $(`.results`).html(`<h2 class="your-trip">${object.location}</h2>`);
+}
