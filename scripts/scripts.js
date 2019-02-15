@@ -126,58 +126,31 @@ myApp.handleSubmit = function() {
         userThinker = $(`input[name=q-4]:checked`).val();
 
         //narrow options between hot or cold arrays inside the trips object
-        let temp = myApp.trips[userTemp];
-        console.log(temp)
-
-
-        //empty array to hold first filterd options
-        // for loop to go though the temp array and filter and push the usercost options to the aOne array
-        const one = temp.filter((item) => {
-            return item.cost === userCost;
+        let qOne = myApp.trips[userTemp];
+        console.log("qOne",qOne)//TBD
+       
+         //check qOne array if it === userCost push to qTwo
+        let qTwo = qOne.filter((item) => {
+           return item.cost === userCost;
         });
-        console.log("one", one)
-        const two = one.filter((item) => {
+        console.log("qTwo", qTwo)//TBD
+
+        //check qTwo array if it === userAdventure push to qThree
+        let qThree = qTwo.filter((item) => {
             return item.adventures === userAdventures;
         });
-        console.log("two", two)
-        const three = two.filter((item) => {
+        console.log("qThree", qThree)//nothing in this array atm
+
+        //check qThree array if it === userThinker push to qFour
+        let qFour = qThree.filter((item) => {
             return item.thinker === userThinker;
         });
-        console.log("three",three)
+        console.log("qFour", qFour)//nothing in this array atm
+
         //send FNL array to print
-        myApp.print(three);
+        myApp.print(qFour);
     })
-
-    // let aOne = []//this holds costChoice
-    // for (let i = 0; i < temp.length; i = i + 1) {
-    //     let costChoice = temp[i];
-
-    //     if (costChoice.cost === userCost) {
-    //         aOne.push(costChoice);
-    //     }
-    // }
-
-    // let aTwo = []//this holds adventuresChoice
-    // for (let i = 0; i < temp.length; i = i + 1) {
-    //     let adventuresChoice = aOne[i];
-
-    //     if (adventuresChoice.adventures === userAdventures) {
-    //         aTwo.push(adventuresChoice);
-    //     }
-    // }
-
-    // let aThree = []//this holds thinkerChoice
-    // for (let i = 0; i < temp.length; i = i + 1) {
-    //     let thinkerChoice = aTwo[i];
-
-    //     if (thinkerChoice.thinker === userThinker) {
-    //         aThree.push(thinkerChoice);
-    //     }
-    // }
-
-
-  
-}
+};
 
 //on load of page run init function
 $(function(){
