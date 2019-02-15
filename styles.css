@@ -172,4 +172,10 @@ template {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+fieldset {
+  display: none; }
+
+fieldset:first-child {
+  display: block; }
+
 /*# sourceMappingURL=styles.css.map */

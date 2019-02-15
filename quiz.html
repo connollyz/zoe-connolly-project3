@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="travel, quiz, fun, vacation">
+    <meta name="description" content="Quiz to find out your next fun travel destination.">
+    <!-- links -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!-- google fonts -->
+
+    <!-- site title -->
+    <title>Quiz</title>
+    <!-- css link -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body id="quiz">
+    <main>
+        <form>
+            <!-- Question one -->
+            <fieldset class="question-1">
+                <!-- question -->
+                <p>Would you perfer a hot or cold destanation?</p>
+                <!-- option 1 -->
+                <label for="hot">hot</label>
+                <input type="radio" required=true name="q-1" id="hot" value="hot">
+                <!-- option 2 -->
+                <label for="cold">cold</label>
+                <input type="radio" required=true name="q-1" id="cold" value="cold">
+            </fieldset>
+
+            <!-- Question two -->
+            <fieldset class="question-2">
+                <!-- question -->
+                <p>How much are you looking to spend on your get away?</p>
+                <!-- option 1 -->
+                <label for="low-cost">$</label>
+                <input type="radio"required=true  name="q-2" id="low-cost" value="$">
+                <!-- option 2 -->
+                <label for="high-cost">$$</label>
+                <input type="radio"required=true  name="q-2" id="high-cost" value="$$">
+            </fieldset>
+
+            <!-- Question three -->
+            <fieldset class="question-3">
+                <!-- question -->
+                <p>Are you feeling adventures?</p>
+                <!-- option 1 -->
+                <label for="yes">duh</label>
+                <input type="radio" required=true name="q-3" id="yes" value="yes">
+                <!-- option 2 -->
+                <label for="no">nah</label>
+                <input type="radio" required=true name="q-3" id="no" value="no">
+            </fieldset>
+
+            <!-- Question four -->
+            <fieldset class="question-4">
+                <!-- question -->
+                <p>Are you a more logical or creative thinker?</p>
+                <!-- option 1 -->
+                <label for="logical">logical</label>
+                <input type="radio" required=true  name="q-4" id="logical" value="logical">
+                <!-- option 2 -->
+                <label for="creative">creative</label>
+                <input type="radio" required=true  name="q-4" id="creative" value="creative">
+            </fieldset>
+            <!-- submit to get results -->
+            <fieldset class="submit">
+                <!-- submit -->
+                <label for="submit">get results</label>
+                <input id="submit" type="submit" value="submit">
+            </fieldset>
+        </form>
+        <div class="results">
+
+        </div>
+    </main>
+    <footer>
+        <p>&#169; Zoe Connolly 2019</p>
+    </footer>
+    <!-- scripts link -->
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js'
+        integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=' crossorigin='anonymous'></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+
+</html>

@@ -113,6 +113,45 @@ myApp.trips ={
     ]//end of cold array
 }
 
+//show and hide qustions on change / click
+$('.question-1 input').on('change', function () {
+   if ($(this).is(':checked')){ 
+       $('.question-1').hide();
+       $('.question-2').show();
+   }
+});
+
+$('.question-2 input').on('change', function () {
+    if ($(this).is(':checked')) {
+        $('.question-2').hide();
+        $('.question-3').show();
+    }
+});
+
+$('.question-3 input').on('change', function () {
+    if ($(this).is(':checked')) {
+        $('.question-3').hide();
+        $('.question-4').show();
+    }
+});
+
+$('.question-4 input').on('change', function () {
+    if ($(this).is(':checked')) {
+        $('.question-4').hide();
+        $('.submit').show();
+    }
+});
+
+
+$('.submit').on('click', function () {
+        $('.submit').hide();
+});
+
+
+
+
+
+
 
 
 myApp.handleSubmit = function() {
