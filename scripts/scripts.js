@@ -139,13 +139,13 @@ myApp.handleSubmit = function() {
         let qThree = qTwo.filter((item) => {
             return item.adventures === userAdventures;
         });
-        console.log("qThree", qThree)//nothing in this array atm
+        console.log("qThree", qThree)//TBD
 
         //check qThree array if it === userThinker push to qFour
         let qFour = qThree.filter((item) => {
             return item.thinker === userThinker;
         });
-        console.log("qFour", qFour)//nothing in this array atm
+        console.log("qFour", qFour)//TBD
 
         //send FNL array to print
         myApp.print(qFour);
@@ -158,6 +158,7 @@ $(function(){
 })
 
 //print FNL result
-myApp.print = function(object){
-    $(`.results`).html(`<h2 class="your-trip">${object.location}</h2>`);
+myApp.print = function (object){
+    console.log("fnl", object)
+    $(`.results`).html(`<h2 class="your-trip">${object[0].location}</h2>`);
 }
