@@ -1,9 +1,47 @@
-fieldset{
+.quiz{
+    background:#fffffb;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header .wrapper{
+    text-align: left;
+    font-size: .75rem;
+    .fa-plane{
+        font-size: .75rem;
+        margin: 20px 10px 0 0;
+    }
+}
+
+fieldset{ 
+    margin-top: 25%;
     display: none;
+    border: none;
+    p{
+        font-family: $primary-font;
+        font-size: 1.25rem;
+    }
+
+    input[type="radio"], input[type="submit"]{
+      display:none;  
+    }
+
+    label{
+        display: inline-block;
+        padding:15px 40px;
+        margin: 0 10%;
+        border: 3px solid $primary-color;
+        color: $primary-color;
+    } 
+
+    .submit{
+        margin-top: 15%;
+    }
 }
 
 fieldset:first-child{
     display:  block;
 }
+
 
 

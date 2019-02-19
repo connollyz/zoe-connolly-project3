@@ -1,5 +1,14 @@
+// colors
+$primary-color: #fbb03b;
+$secondary-color: #1a1a1a;
+
+//fonts
+$primary-font: 'Domine', serif;
+$secondary-font:'Montserrat', sans-serif;
+
 html{
 font-size: 125%;
+font-family: $secondary-font
 }
 
 .wrapper{
@@ -11,17 +20,16 @@ font-size: 125%;
 
 a{
     text-decoration: none;
-    
+    color: $primary-color;
 }
 
-h1{
-    font-size: 2rem;
-}
-
-h2{
-    font-size: 1.5rem;
-}
 
 p{
     font-size: 1rem;
+    color: $secondary-color;
 }
+
+footer{
+    padding-bottom: 1px;
+}
+
