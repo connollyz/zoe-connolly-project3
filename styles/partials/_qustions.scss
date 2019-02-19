@@ -65,7 +65,28 @@ fieldset:first-child{
 }
 
 .results{
-    margin-top: 30%;
+    margin-top: 3%;
+    div{
+        width:500px;
+        margin: 5% auto;
+        img{
+            width: 100%;
+        }
+    }
+    h2{
+        font-family: $primary-font;
+        color: $primary-color;
+        font-size: 3rem;
+        margin: 0;
+
+    }
+    p{
+        text-align: left;
+        width: 500px;
+        margin: 0 auto 5% auto;
+        font-size: .75rem;
+        line-height: 1.3rem;
+    }
 }
 
 

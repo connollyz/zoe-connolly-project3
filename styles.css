@@ -292,7 +292,23 @@ fieldset:first-child {
   display: block; }
 
 .results {
-  margin-top: 30%; }
+  margin-top: 3%; }
+  .results div {
+    width: 500px;
+    margin: 5% auto; }
+    .results div img {
+      width: 100%; }
+  .results h2 {
+    font-family: "Domine", serif;
+    color: #fbb03b;
+    font-size: 3rem;
+    margin: 0; }
+  .results p {
+    text-align: left;
+    width: 500px;
+    margin: 0 auto 5% auto;
+    font-size: .75rem;
+    line-height: 1.3rem; }
 
 @media (max-width: 750px) {
   header h1 {
