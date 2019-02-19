@@ -4,25 +4,25 @@
     header{
         h1{
             font-size: 3rem;
-        }
+        }//h1
         .fa-plane{
             font-size: 3rem;
-        }
-    }
-}
+        }//fa-plane
+    }//header
+}//750px
 
 //mobile
 @media (max-width:485px){
     header{
         h1{
             font-size: 2rem;
-        }
+        }//h1
         .fa-plane{
             margin-top: 60%;
             font-size: 2rem;
-        }
-    }
+        }//fa-plane
+    }//header
     .home main p{
         font-size: .6rem;
-    }
-}
+    }//home main p
+}//485px

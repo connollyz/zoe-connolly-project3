@@ -13,7 +13,7 @@ myApp.trips ={
     hot:[
         {   
             //google images
-            image:"/assets/new-orleans.jpg",
+            image:"assets/new-orleans.jpg",
             alt:"A red streetcar in New Orleans driving down a colourful, busy street lined with palm trees.",
             location: "New Orleans",
             //wiki discriptions
@@ -24,7 +24,7 @@ myApp.trips ={
         },
          {
             //google images
-            image: "/assets/las-vegas.jpg",
+            image: "assets/las-vegas.jpg",
              alt: "City view of Los Vagus at night bright lights and busy streets.",
             location: "Las Vegas",
             //wiki discriptions
@@ -35,7 +35,7 @@ myApp.trips ={
         },
          {
             //google images
-            image: "/assets/key-west.jpg",
+            image: "assets/key-west.jpg",
             alt: "Beautiful beach, light blue water and lots of palm trees.",
             location: "Key West",
             //wiki discription
@@ -46,7 +46,7 @@ myApp.trips ={
         },
          {  
             //google images
-            image: "/assets/nasa.jpg",
+            image: "assets/nasa.jpg",
             alt: "Space ship taking off to space",
             location: "NASA",
             description: "Your next trip is to NASA to learn about space.",
@@ -56,7 +56,7 @@ myApp.trips ={
         },
          {
             //google images
-            image: "/assets/sun.jpg",
+            image: "assets/sun.jpg",
             alt: "the sun a hot ball of plasma.",
             location: "The Sun",
             //wiki discription
@@ -67,7 +67,7 @@ myApp.trips ={
         },
          {
             //google images
-            image: "/assets/galápagos-islands.jpg",
+            image: "assets/galápagos-islands.jpg",
             alt: "Beautiful beach with rock formations along the shour and a seal playing in the water.",
             location: "Galápagos Islands",
             //wiki discription
@@ -78,7 +78,7 @@ myApp.trips ={
         },
         {
             //google images
-            image: "/assets/melbourne.jpg",
+            image: "assets/melbourne.jpg",
             alt: "City scape of Melborne Australia.",
             location: "Melbourne AU",
             //wiki discription
@@ -89,7 +89,7 @@ myApp.trips ={
         },
         {   
             //google images
-            image: "/assets/silicon-valley.png",
+            image: "assets/silicon-valley.png",
             alt: "Birds eye view of Silicon Valley title opening.",
             location: "Silicon Valley",
             //wiki discription
@@ -103,7 +103,7 @@ myApp.trips ={
     cold: [
         {
             //google images
-            image: "/assets/yellowknife.jpg",
+            image: "assets/yellowknife.jpg",
             alt: "winter land scape photo of the colourful northron lights above the city of yellowknife",
             location: "Yellowknife CA",
             //wiki discription
@@ -114,7 +114,7 @@ myApp.trips ={
         },
         {
             //google images
-            image: "/assets/jasper.jpg",
+            image: "assets/jasper.jpg",
             alt: "Spirit island jasper ab. Beautiful blue lake with mountains in the background.",
             location: "Jasper Ab CA",
             //wiki discription
@@ -125,7 +125,7 @@ myApp.trips ={
         },
         {
             //google images
-            image: "/assets/winnipeg.jpg",
+            image: "assets/winnipeg.jpg",
             alt: "Winter weather, person walking down a snow coverd street.",
             location: "Winnipeg",
             //wiki discription
@@ -136,7 +136,7 @@ myApp.trips ={
         },
         {
             //google images
-            image: "/assets/sweden.jpg",
+            image: "assets/sweden.jpg",
             alt: "Beautiful mountain landscape with hiker admiring the view.",
             location: "Sweden",
             //wiki discription
@@ -148,7 +148,7 @@ myApp.trips ={
         {
 
             //google images
-            image: "/assets/mars.jpg",
+            image: "assets/mars.jpg",
             alt: "surface of mars viewed from space ship",
             location: "Mars",
             //wiki discription
@@ -159,7 +159,7 @@ myApp.trips ={
         },
         {   
             //google images
-            image: "/assets/iceland.jpg",
+            image: "assets/iceland.jpg",
             alt: "Waterfalls runing down the side of a rock formation in to a river, with bright green grass.",
             location: "Iceland",
             //wiki discription
@@ -170,7 +170,7 @@ myApp.trips ={
         },
         {
             //google images
-            image: "/assets/montreal.jpg",
+            image: "assets/montreal.jpg",
             alt: "Old city streets of Montreal, lined with shops.",
             location: "Montreal CA",
             //wiki discription
@@ -181,7 +181,7 @@ myApp.trips ={
         },
         {
             //google images
-            image: "/assets/death-star.jpeg",
+            image: "assets/death-star.jpeg",
             alt: "Starwars Death Start traveling though space.",
             location: "Starwars Death Star ",
             //wiki discription
@@ -240,25 +240,25 @@ myApp.handleSubmit = function() {
 
         //narrow options between hot or cold arrays inside the trips object
         let qOne = myApp.trips[userTemp];
-        console.log("qOne",qOne)//TBD
+      
        
          //check qOne array if it === userCost push to qTwo
         let qTwo = qOne.filter((item) => {
            return item.cost === userCost;
         });
-        console.log("qTwo", qTwo)//TBD
+       
 
         //check qTwo array if it === userAdventure push to qThree
         let qThree = qTwo.filter((item) => {
             return item.adventures === userAdventures;
         });
-        console.log("qThree", qThree)//TBD
+      
 
         //check qThree array if it === userThinker push to qFour
         let qFour = qThree.filter((item) => {
             return item.thinker === userThinker;
         });
-        console.log("qFour", qFour)//TBD
+ 
 
         //send FNL array to print
         myApp.print(qFour);
@@ -272,7 +272,6 @@ $(function(){
 
 //print FNL result
 myApp.print = function (object){
-    console.log("fnl", object)
     $(`.results`).html(
         `
         <h2 class="your-trip">${object[0].location}</h2>

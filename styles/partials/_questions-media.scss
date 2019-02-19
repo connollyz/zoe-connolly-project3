@@ -3,65 +3,63 @@
         margin-top: 40%;
         p{
             margin-bottom: 20%;
-        }
+        }//p
         label{
             margin: 0 2%;
-        } 
+        }//label
         .submit{
             margin-top: 20%;
-        }
-    }
+        }//submit
+    }//feildset
 
     .results{
         div{
             width:350px;
             margin: 5% auto;
-        }
+        }//div
         h2{
-
             font-size: 2.5rem;
-
-
-        }
+        }//h2
         p{
             width: 350px;
             margin: 0 auto 10% auto;
-        }
-    }
-}
+        }//p
+    }//results
+}//750px
 
 @media (max-width:485px){
     header .wrapper .fa-plane{
         top: -52px;
-    }
+    }//header wrapper fa-plane
 
     fieldset{ 
         margin-top: 40%;
         p{
            text-align: left;
-        }
+        }//p
         label{
             display: block;
             padding:15px auto;
             margin: 20px 0;
             border: 3px solid $primary-color;
             color: $primary-color;
-        }
+        }//label
         .submit{
             margin-top: 50%;
-        }
-    }
+        }//submit
+    }//feildset
+
     .results{
         div{
             width:90%;
             margin: 10% auto;
-        }
+        }//div
         h2{
             font-size: 2rem;
-        }
+        }//h2
         p{
             width: 90%;
             margin: 0 auto 10% auto;
-        }
-    }
-}
+        }//p
+    }//results
+}//485px

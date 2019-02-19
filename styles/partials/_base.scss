@@ -16,23 +16,23 @@ font-family: $secondary-font
     max-width: 1020px;
     width: 80%;
     text-align: center;
-}
+}//wrapper
 
 a{
     text-decoration: none;
     color: $primary-color;
-}
+}//a
 
 p{
     font-size: 1rem;
     color: $secondary-color;
-}
+}//p
 
 footer{
     padding-bottom: 1px;
      p{
         text-align: left;
         font-size: .5rem;
-    }
-}
+    }//p
+}//footer
 

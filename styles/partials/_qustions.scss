@@ -2,7 +2,7 @@
     background: url(./assets/background.jpg);
     height: 100vh;
     overflow: hidden;
-}
+}//quiz
 
 header .wrapper{
     text-align: left;
@@ -10,22 +10,22 @@ header .wrapper{
     padding: 20px;
     a{
         position: relative;
-    &:hover{
+        &:hover{
             font-weight:900;
             border-bottom: 3px solid $primary-color;
             .fa-plane{
                 left: 1000px;
-            }
-        }
-    }
+            }//fa-plane
+        }//hover
+    }//a
     .fa-plane{
         position: absolute;
         font-size: 1rem;
         top:-5px;
         left: 100px;
         transition: all ease 4s;
-    }
-}
+    }//fa-plane
+}//header wrapper
 
 fieldset{ 
     display: none;
@@ -35,11 +35,11 @@ fieldset{
         font-family: $primary-font;
         font-size: 1.25rem;
         margin-bottom: 10%;
-    }
+    }//p
 
     input[type="radio"], input[type="submit"]{
       display: none;  
-    }
+    }//radio, submit
 
     label{
         display: inline-block;
@@ -53,16 +53,16 @@ fieldset{
             font-weight: 900;
             cursor: pointer;
             box-shadow: 3px 3px 3px rgba(26,26,26, .2);
-        }
-    } 
+        }//hover
+    }//label
     .submit{
         margin-top: 15%;
-    }
+    }//submit
 }
 
 fieldset:first-child{
     display:  block;
-}
+}//feildset
 
 .results{
     margin-top: 3%;
@@ -71,22 +71,21 @@ fieldset:first-child{
         margin: 5% auto;
         img{
             width: 100%;
-        }
-    }
+        }//img
+    }//div
     h2{
         font-family: $primary-font;
         color: $primary-color;
         font-size: 3rem;
         margin: 0;
-
-    }
+    }//h2
     p{
         text-align: left;
         width: 500px;
         margin: 0 auto 5% auto;
         font-size: .75rem;
         line-height: 1.3rem;
-    }
+    }//p
     a{  
         padding: 5px  10px;
         border:  3px solid $primary-color;
@@ -96,6 +95,6 @@ fieldset:first-child{
             font-weight: 900;
             cursor: pointer;
             box-shadow: 3px 3px 3px rgba(26,26,26, .2);
-        }
-    }
-}
+        }//hover
+    }//a
+}//results
