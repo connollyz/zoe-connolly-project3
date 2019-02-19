@@ -309,6 +309,16 @@ fieldset:first-child {
     margin: 0 auto 5% auto;
     font-size: .75rem;
     line-height: 1.3rem; }
+  .results a {
+    padding: 5px  10px;
+    border: 3px solid #fbb03b; }
+    .results a:hover {
+      background: #fbb03b;
+      color: #fffffb;
+      font-weight: 900;
+      cursor: pointer;
+      -webkit-box-shadow: 3px 3px 3px rgba(26, 26, 26, 0.2);
+      box-shadow: 3px 3px 3px rgba(26, 26, 26, 0.2); }
 
 @media (max-width: 750px) {
   header h1 {
@@ -334,8 +344,14 @@ fieldset:first-child {
       margin: 0 2%; }
     fieldset .submit {
       margin-top: 20%; }
-  .results {
-    margin-top: 60%; } }
+  .results div {
+    width: 350px;
+    margin: 5% auto; }
+  .results h2 {
+    font-size: 2.5rem; }
+  .results p {
+    width: 350px;
+    margin: 0 auto 10% auto; } }
 
 @media (max-width: 485px) {
   header .wrapper .fa-plane {
@@ -352,7 +368,13 @@ fieldset:first-child {
       color: #fbb03b; }
     fieldset .submit {
       margin-top: 50%; }
-  .results {
-    margin-top: 80%; } }
+  .results div {
+    width: 90%;
+    margin: 10% auto; }
+  .results h2 {
+    font-size: 2rem; }
+  .results p {
+    width: 90%;
+    margin: 0 auto 10% auto; } }
 
 /*# sourceMappingURL=styles.css.map */

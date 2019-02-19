@@ -13,7 +13,20 @@
     }
 
     .results{
-        margin-top: 60%;
+        div{
+            width:350px;
+            margin: 5% auto;
+        }
+        h2{
+
+            font-size: 2.5rem;
+
+
+        }
+        p{
+            width: 350px;
+            margin: 0 auto 10% auto;
+        }
     }
 }
 
@@ -38,8 +51,17 @@
             margin-top: 50%;
         }
     }
-    
     .results{
-        margin-top: 80%;
+        div{
+            width:90%;
+            margin: 10% auto;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        p{
+            width: 90%;
+            margin: 0 auto 10% auto;
+        }
     }
 }
