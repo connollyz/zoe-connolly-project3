@@ -1,0 +1,28 @@
+
+//tablet
+@media (max-width:750px){
+    header{
+        h1{
+            font-size: 3rem;
+        }
+        .fa-plane{
+            font-size: 3rem;
+        }
+    }
+}
+
+//mobile
+@media (max-width:485px){
+    header{
+        h1{
+            font-size: 2rem;
+        }
+        .fa-plane{
+            margin-top: 60%;
+            font-size: 2rem;
+        }
+    }
+    .home main p{
+        font-size: .6rem;
+    }
+}

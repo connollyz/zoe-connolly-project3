@@ -1,0 +1,45 @@
+@media (max-width:750px){
+    fieldset{ 
+        margin-top: 40%;
+        p{
+            margin-bottom: 20%;
+        }
+        label{
+            margin: 0 2%;
+        } 
+        .submit{
+            margin-top: 20%;
+        }
+    }
+
+    .results{
+        margin-top: 60%;
+    }
+}
+
+@media (max-width:485px){
+    header .wrapper .fa-plane{
+        top: -52px;
+    }
+
+    fieldset{ 
+        margin-top: 40%;
+        p{
+           text-align: left;
+        }
+        label{
+            display: block;
+            padding:15px auto;
+            margin: 20px 0;
+            border: 3px solid $primary-color;
+            color: $primary-color;
+        }
+        .submit{
+            margin-top: 50%;
+        }
+    }
+
+    .results{
+        margin-top: 80%;
+    }
+}

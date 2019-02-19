@@ -192,6 +192,9 @@ p {
 
 footer {
   padding-bottom: 1px; }
+  footer p {
+    text-align: left;
+    font-size: .5rem; }
 
 .home {
   display: -webkit-box;
@@ -216,46 +219,57 @@ header .fa-plane {
   font-size: 4rem;
   margin: 10%; }
 
-main {
+.home main {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
-  main p {
+  .home main p {
     font-size: .75rem;
     margin-bottom: 100px; }
-  main a {
+  .home main a {
     padding: 5px  10px;
     border: 3px solid #fbb03b; }
-
-footer p {
-  text-align: left;
-  font-size: .5rem; }
+    .home main a:hover {
+      background: #fbb03b;
+      color: #fffffb;
+      font-weight: 900;
+      cursor: pointer;
+      -webkit-box-shadow: 3px 3px 3px rgba(26, 26, 26, 0.2);
+      box-shadow: 3px 3px 3px rgba(26, 26, 26, 0.2); }
 
 .quiz {
-  background: #fffffb;
+  background: url(./assets/background.jpg);
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column; }
+  overflow: hidden; }
 
 header .wrapper {
   text-align: left;
-  font-size: .75rem; }
+  font-size: 1rem;
+  padding: 20px; }
+  header .wrapper a {
+    position: relative; }
+    header .wrapper a:hover {
+      font-weight: 900;
+      border-bottom: 3px solid #fbb03b; }
+      header .wrapper a:hover .fa-plane {
+        left: 1000px; }
   header .wrapper .fa-plane {
-    font-size: .75rem;
-    margin: 20px 10px 0 0; }
+    position: absolute;
+    font-size: 1rem;
+    top: -5px;
+    left: 100px;
+    -webkit-transition: all ease 4s;
+    -o-transition: all ease 4s;
+    transition: all ease 4s; }
 
 fieldset {
-  margin-top: 25%;
   display: none;
-  border: none; }
+  border: none;
+  margin-top: 20%; }
   fieldset p {
     font-family: "Domine", serif;
-    font-size: 1.25rem; }
+    font-size: 1.25rem;
+    margin-bottom: 10%; }
   fieldset input[type="radio"], fieldset input[type="submit"] {
     display: none; }
   fieldset label {
@@ -264,10 +278,65 @@ fieldset {
     margin: 0 10%;
     border: 3px solid #fbb03b;
     color: #fbb03b; }
+    fieldset label:hover {
+      background: #fbb03b;
+      color: #fffffb;
+      font-weight: 900;
+      cursor: pointer;
+      -webkit-box-shadow: 3px 3px 3px rgba(26, 26, 26, 0.2);
+      box-shadow: 3px 3px 3px rgba(26, 26, 26, 0.2); }
   fieldset .submit {
     margin-top: 15%; }
 
 fieldset:first-child {
   display: block; }
+
+.results {
+  margin-top: 30%; }
+
+@media (max-width: 750px) {
+  header h1 {
+    font-size: 3rem; }
+  header .fa-plane {
+    font-size: 3rem; } }
+
+@media (max-width: 485px) {
+  header h1 {
+    font-size: 2rem; }
+  header .fa-plane {
+    margin-top: 60%;
+    font-size: 2rem; }
+  .home main p {
+    font-size: .6rem; } }
+
+@media (max-width: 750px) {
+  fieldset {
+    margin-top: 40%; }
+    fieldset p {
+      margin-bottom: 20%; }
+    fieldset label {
+      margin: 0 2%; }
+    fieldset .submit {
+      margin-top: 20%; }
+  .results {
+    margin-top: 60%; } }
+
+@media (max-width: 485px) {
+  header .wrapper .fa-plane {
+    top: -52px; }
+  fieldset {
+    margin-top: 40%; }
+    fieldset p {
+      text-align: left; }
+    fieldset label {
+      display: block;
+      padding: 15px auto;
+      margin: 20px 0;
+      border: 3px solid #fbb03b;
+      color: #fbb03b; }
+    fieldset .submit {
+      margin-top: 50%; }
+  .results {
+    margin-top: 80%; } }
 
 /*# sourceMappingURL=styles.css.map */

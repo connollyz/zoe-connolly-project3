@@ -23,7 +23,6 @@ a{
     color: $primary-color;
 }
 
-
 p{
     font-size: 1rem;
     color: $secondary-color;
@@ -31,5 +30,9 @@ p{
 
 footer{
     padding-bottom: 1px;
+     p{
+        text-align: left;
+        font-size: .5rem;
+    }
 }
 

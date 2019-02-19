@@ -1,29 +1,44 @@
 .quiz{
-    background:#fffffb;
+    background: url(./assets/background.jpg);
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    overflow: hidden;
 }
+
 header .wrapper{
     text-align: left;
-    font-size: .75rem;
+    font-size: 1rem;
+    padding: 20px;
+    a{
+        position: relative;
+    &:hover{
+            font-weight:900;
+            border-bottom: 3px solid $primary-color;
+            .fa-plane{
+                left: 1000px;
+            }
+        }
+    }
     .fa-plane{
-        font-size: .75rem;
-        margin: 20px 10px 0 0;
+        position: absolute;
+        font-size: 1rem;
+        top:-5px;
+        left: 100px;
+        transition: all ease 4s;
     }
 }
 
 fieldset{ 
-    margin-top: 25%;
     display: none;
     border: none;
+    margin-top: 20%;
     p{
         font-family: $primary-font;
         font-size: 1.25rem;
+        margin-bottom: 10%;
     }
 
     input[type="radio"], input[type="submit"]{
-      display:none;  
+      display: none;  
     }
 
     label{
@@ -32,8 +47,14 @@ fieldset{
         margin: 0 10%;
         border: 3px solid $primary-color;
         color: $primary-color;
+        &:hover{
+            background: $primary-color;
+            color: #fffffb;
+            font-weight: 900;
+            cursor: pointer;
+            box-shadow: 3px 3px 3px rgba(26,26,26, .2);
+        }
     } 
-
     .submit{
         margin-top: 15%;
     }
@@ -41,6 +62,10 @@ fieldset{
 
 fieldset:first-child{
     display:  block;
+}
+
+.results{
+    margin-top: 30%;
 }
 
 
