@@ -67,7 +67,7 @@ myApp.trips ={
         },
          {
             //google images
-            image: "assets/galápagos-islands.jpg",
+            image: "assets/galápagos-islands.JPG",
             alt: "Beautiful beach with rock formations along the shour and a seal playing in the water.",
             location: "Galápagos Islands",
             //wiki discription
