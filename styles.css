@@ -174,7 +174,14 @@ template {
 
 html {
   font-size: 125%;
-  font-family: "Montserrat", sans-serif; }
+  font-family: "Montserrat", sans-serif;
+  background: #13132d; }
+
+body {
+  background: url(./assets/background-dark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh; }
 
 .wrapper {
   margin: 0 auto;
@@ -188,7 +195,7 @@ a {
 
 p {
   font-size: 1rem;
-  color: #1a1a1a; }
+  color: rgba(226, 226, 226, 0.9); }
 
 footer {
   padding-bottom: 1px; }
@@ -204,9 +211,9 @@ footer {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  background: url(./assets/background.jpg);
-  height: 100vh;
-  padding-top: 1px; }
+  background: url(./assets/background-dark.jpg);
+  background-size: cover;
+  height: 100vh; }
 
 header h1 {
   font-size: 4rem;
@@ -236,11 +243,6 @@ header .fa-plane {
       cursor: pointer;
       -webkit-box-shadow: 3px 3px 3px rgba(26, 26, 26, 0.2);
       box-shadow: 3px 3px 3px rgba(26, 26, 26, 0.2); }
-
-.quiz {
-  background: url(./assets/background.jpg);
-  height: 100vh;
-  overflow: hidden; }
 
 header .wrapper {
   text-align: left;

@@ -1,16 +1,16 @@
 .home{
     display: flex;
     flex-direction: column;
-    background: url(./assets/background.jpg);
+    background: url(./assets/background-dark.jpg);
+    background-size: cover;
     height: 100vh;
-    padding-top :1px;
+   
 }//home
 header{
     h1{
         font-size: 4rem;
         color: $primary-color;
         font-family: $primary-font;
-        
         margin:0;
     }//h1
     .fa-plane{

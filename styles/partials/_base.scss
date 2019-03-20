@@ -1,6 +1,6 @@
 // colors
 $primary-color: #fbb03b;
-$secondary-color: #1a1a1a;
+$secondary-color: rgba(226,226,226, .9);
 
 //fonts
 $primary-font: 'Domine', serif;
@@ -8,9 +8,15 @@ $secondary-font:'Montserrat', sans-serif;
 
 html{
 font-size: 125%;
-font-family: $secondary-font
+font-family: $secondary-font;
+background: #13132d;
 }
-
+body{
+    background: url(./assets/background-dark.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;  
+}
 .wrapper{
     margin: 0 auto;
     max-width: 1020px;
