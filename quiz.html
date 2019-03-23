@@ -22,14 +22,14 @@
     <div class="quiz" id="quiz">
         <header>
             <div class="wrapper">
-                <a href="index.html">start over<i class="fas fa-plane"></i></a>
+                <a href="index.html">start over<i class="fas fa-plane go"></i></a>
             </div>
         </header>
         <main>
             <div class="wrapper">
                 <form>
                     <!-- Question one -->
-                    <fieldset class="question-1">
+                    <fieldset class="question-1 clearfix">
                         <!-- question -->
                         <p>Would you perfer a hot or cold destanation?</p>
                         <!-- option 1 -->
@@ -37,11 +37,11 @@
                         <input type="radio" required=true name="q-1" id="hot" value="hot">
                         <!-- option 2 -->
                         <label for="cold">cold</label>
-                        <input type="radio" required=true name="q-1" id="cold" value="cold">
+                        <input type="radio" required=true name="q-1" id="cold" value="cold">  
                     </fieldset>
 
                     <!-- Question two -->
-                    <fieldset class="question-2">
+                    <fieldset class="question-2 clearfix">
                         <!-- question -->
                         <p>How much are you looking to spend on your get away?</p>
                         <!-- option 1 -->
@@ -50,10 +50,13 @@
                         <!-- option 2 -->
                         <label for="high-cost">$$</label>
                         <input type="radio"required=true  name="q-2" id="high-cost" value="$$">
+                        <!-- back -->
+                        <label for="back">back</label>
+                        <input type="radio"  class="back" name="back" id="back" value="back">
                     </fieldset>
 
                     <!-- Question three -->
-                    <fieldset class="question-3">
+                    <fieldset class="question-3 clearfix">
                         <!-- question -->
                         <p>Are you feeling adventures?</p>
                         <!-- option 1 -->
@@ -62,10 +65,13 @@
                         <!-- option 2 -->
                         <label for="no">no</label>
                         <input type="radio" required=true name="q-3" id="no" value="no">
+                        <!-- back -->
+                        <label for="back">back</label>
+                        <input type="button" name="back" value="back">
                     </fieldset>
 
                     <!-- Question four -->
-                    <fieldset class="question-4">
+                    <fieldset class="question-4 clearfix">
                         <!-- question -->
                         <p>Are you a more logical or creative thinker?</p>
                         <!-- option 1 -->
@@ -74,12 +80,18 @@
                         <!-- option 2 -->
                         <label for="creative">creative</label>
                         <input type="radio" required=true  name="q-4" id="creative" value="creative">
+                        <!-- back -->
+                        <label for="back">back</label>
+                        <input type="button" name="back" value="back">
                     </fieldset>
                     <!-- submit to get results -->
                     <fieldset class="submit">
                         <!-- submit -->
                         <label class="submit" for="submit">get results</label>
                         <input id="submit" type="submit" value="submit">
+                        <!-- back -->
+                        <label for="back">back</label>
+                        <input type="button" name="back" value="back">
                     </fieldset>
                 </form>
                 <div class="results"></div> 

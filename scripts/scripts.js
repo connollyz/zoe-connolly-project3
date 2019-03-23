@@ -103,7 +103,7 @@ myApp.trips ={
     cold: [
         {
             //google images
-            image: "assets/yellowknife.jpg",
+            image: "assets/yellowKnif.jpg",
             alt: "winter land scape photo of the colourful northron lights above the city of yellowknife",
             location: "Yellowknife CA",
             //wiki discription
@@ -201,7 +201,8 @@ $('.question-1 input').on('change', function () {
    }
 });
 
-$('.question-2 input').on('change', function () {
+
+$('.question-2 input').on('click', function () {
     if ($(this).is(':checked')) {
         $('.question-2').hide();
         $('.question-3').show();

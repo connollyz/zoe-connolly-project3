@@ -13,10 +13,11 @@ header{
         font-family: $primary-font;
         margin:0;
     }//h1
-    .fa-plane{
+    .plane{
         color: $primary-color;
         font-size: 4rem;
-        margin: 10%;  
+        margin:  25% 10% 5% 10%;  
+        visibility: hidden;
     }//fa-plane
 }//header
 .home main{
