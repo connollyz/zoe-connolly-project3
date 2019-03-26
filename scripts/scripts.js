@@ -202,11 +202,11 @@ $('.question-1 input').on('change', function () {
 });
 
 
-$('.question-2 input').on('click', function () {
+$('.question-2 input[type="radio"]').on('click', function () {
     if ($(this).is(':checked')) {
         $('.question-2').hide();
         $('.question-3').show();
-    }
+    } 
 });
 
 $('.question-3 input').on('change', function () {
