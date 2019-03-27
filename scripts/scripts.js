@@ -201,18 +201,27 @@ $('.question-1 input').on('change', function () {
    }
 });
 
-
-$('.question-2 input[type="radio"]').on('click', function () {
-    if ($(this).is(':checked')) {
+// back button only works on this button
+//maybe work with checkbox? 
+$('.question-2 input').on('change', function () {
+    if ($('.q-2').is(':checked')) {
         $('.question-2').hide();
         $('.question-3').show();
-    } 
+    } else{
+        $('.question-2').hide();
+        $('.question-1').show();
+        // trying to clear checked box when reset
+        $('.question-1 input').attr('checked', false);  
+    }
 });
 
 $('.question-3 input').on('change', function () {
     if ($(this).is(':checked')) {
         $('.question-3').hide();
         $('.question-4').show();
+    } else {
+        $('.question-3').hide();
+        $('.question-2').show();
     }
 });
 
@@ -220,12 +229,20 @@ $('.question-4 input').on('change', function () {
     if ($(this).is(':checked')) {
         $('.question-4').hide();
         $('.submit').show();
+    } else {
+        $('.question-4').hide();
+        $('.question-3').show();
     }
 });
 
 
-$('.submit').on('click', function () {
-        $('.submit').hide();
+$('.submit').on('change', function () {
+        if($(this).is(':checked')){
+            $('.submit').hide();
+        }else{
+            $('.submit').hide();
+            $('.question-4').show();
+        }
 });
 
 
